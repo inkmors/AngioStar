@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../Pages/Home/"
-import AboutPage from "../Pages/AboutPage/"
-import Error from "../Pages/Error/Error"
-import Header from "../Components/Header/Header"
-import Footer from "../Components/Footer/Footer"
+import Home from "../pages/Home/"
+import AboutPage from "../pages/AboutPage/"
+import Error from "../pages/Error/Error"
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
 
 function RoutesPages() {
     return (
