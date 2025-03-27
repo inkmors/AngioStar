@@ -36,16 +36,16 @@ export default function Specialties() {
 
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center bg-[#B3DFF0] rounded-full px-6 py-2 mb-[3rem]">
-            <span className="text-2xl mr-2">⚕️</span>
-            <h2 className="text-xl font-bold text-[#003366]">Nossas Especialidades</h2>
+            {/* <span className="text-2xl mr-2">⚕️</span> */}
+            <h2 className="text-[20px] font-bold text-[#003366] sm:text-[25px]">Nossas Especialidades</h2>
           </div>
           <p className="text-3xl md:text-4xl font-bold text-[#003366] mb-4 max-w-3xl mx-auto leading-tight">
-            Cuidados <span className="text-[#FB2C36]">cardiovasculares</span> completos em um só lugar
+            Cuidados <span className="text-[#FB2C36]">cardiovasculares</span> completos em um só lugar!
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#005B96] to-[#FB2C36] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-[600]">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-[500]">
             Conheça nossas áreas de atuação e clique para saber mais sobre cada exame
           </p>
+          {/* <div className="w-24 h-1 bg-gradient-to-r from-[#005B96] to-[#FB2C36] mx-auto mb-6"></div> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -73,12 +73,12 @@ export default function Specialties() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
+              {/* <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
                 Ver todos os procedimentos
                 <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -105,12 +105,12 @@ export default function Specialties() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
+              {/* <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
                 Ver todos os procedimentos
                 <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -138,12 +138,12 @@ export default function Specialties() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
+              {/* <button className="mt-8 text-[#005B96] font-medium flex items-center group-hover:text-[#FB2C36] transition-colors duration-300">
                 Ver todos os exames
                 <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
