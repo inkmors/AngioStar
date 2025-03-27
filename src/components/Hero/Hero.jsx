@@ -1,20 +1,21 @@
 export default function Hero() {
   return (
-    <section className="relative text-white overflow-hidden h-screen max-h-[800px]">
+    <section className="relative text-white overflow-hidden h-screen max-h-[900px] lg:max-h-[800px]">
       <div className="absolute inset-0 z-0">
         <img 
           src="assets/young-handsome-physician-medical-robe-with-stethoscope.jpg" 
           alt="Médico cardiologista"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center opacity-50 mix-blend-multiply lg:opacity-100"
         />
-        <div className="absolute inset-0 bg-blue-900/40 bg-gradient-to-r from-blue-900/90 to-blue-700/40 md:bg-blue-900/40 bg-gradient-to-r md:from-blue-900/90 md:to-blue-700/10"></div>
+        <div className="absolute inset-0 bg-blue-900/40 bg-gradient-to-r from-blue-900/90 to-blue-700/10 mix-blend-multiply"></div>
       </div>
       
       <div className="container mx-auto px-4 h-full flex items-center relative z-10">
         <div className="max-w-2xl py-20">
               
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 mb-4 mt-5">
-            <span className="font-medium text-[11px] md:text-sm ">Referência em Cardiologia Intervencionista</span>
+            <span className="font-medium text-[11px] md:text-sm ">Referência em Cardiologia Intervencionista
+            </span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -26,10 +27,10 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer md:py-4 md:px-8">
+            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer md:py-4 md:px-8">
               Agendar Meu Exame
             </button>
-            <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium py-2 rounded-full backdrop-blur-sm transition-all duration-300 cursor-pointer md:py-4 md:px-8">
+            <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium py-2 px-5 rounded-full backdrop-blur-sm transition-all duration-300 cursor-pointer md:py-4 md:px-8">
               Conheça Nossos Especialistas
             </button>
           </div>
@@ -39,13 +40,13 @@ export default function Hero() {
               <svg className="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>4.9/ 5 (200+ avaliações)</span>
+              <span className="font-bold">4.9/ 5 (200+ avaliações)</span>
             </div>
             <div className="flex items-center">
               <svg className="w-5 h-5 text-green-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span>+5.000 procedimentos realizados</span>
+              <span className="font-bold">+5.000 procedimentos realizados</span>
             </div>
           </div>
         </div>
