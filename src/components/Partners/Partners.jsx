@@ -1,22 +1,22 @@
 export default function Partners() {
   const hospitals = [
+    { name: "Hospital Santa Rita", logo: "/assets/SantaRitaLogo-Photoroom.png" },
     { name: "Hospital Evangélico", logo: "/icons/hospital.svg" },
+    { name: "Hospital Semper", logo: "/icons/stethoscope.svg" },
     { name: "Hospital Lifecenter", logo: "/icons/heartbeat.svg" },
     { name: "Hospital Materdei", logo: "/icons/medical-cross.svg" },
-    { name: "Hospital Santa Rita", logo: "/icons/hospital-bed.svg" },
-    { name: "Hospital Semper", logo: "/icons/stethoscope.svg" },
-    { name: "Hospital Semper", logo: "/icons/stethoscope.svg" }
   ]
 
   const insurances = [
-    { name: "IPSEMG", logo: "/icons/shield.svg" },
-    { name: "Unimed", logo: "/icons/umbrella.svg" },
-    { name: "Hapvida", logo: "/icons/plus-circle.svg" },
-    { name: "MedSênior", logo: "/icons/user-md.svg" },
-    { name: "Correios", logo: "/icons/truck.svg" },
-    { name: "Saúde Bradesco", logo: "/icons/bank.svg" },
+    { name: "Unimed", logo: "/icons/shield.svg" },
+    { name: "IPSEMG", logo: "/icons/umbrella.svg" },
+    { name: "MedSênior", logo: "/icons/plus-circle.svg" },
+    { name: "Geap", logo: "/icons/user-md.svg" },
+    { name: "Saúde Bradesco", logo: "/icons/truck.svg" },
+    { name: "Hapivida - NDI", logo: "/icons/bank.svg" },
+    { name: "Amil", logo: "/icons/building.svg" },
     { name: "Sul América", logo: "/icons/globe.svg" },
-    { name: "GEAP", logo: "/icons/building.svg" }
+    { name: "Cemig", logo: "/icons/building.svg" },
   ]
 
   return (
@@ -48,7 +48,7 @@ export default function Partners() {
               >
                 <div className="bg-blue-50 p-3 rounded-full mb-3">
                   <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d={hospital.logo} />
+                    <path  />
                   </svg>
                 </div>
                 <span className="text-gray-700 font-medium text-center">{hospital.name}</span>

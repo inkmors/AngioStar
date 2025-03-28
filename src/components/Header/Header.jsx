@@ -34,7 +34,7 @@ export default function ModernHeader() {
           {/* Menu Desktop */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
             <a 
-              href="#about" 
+              href="#specialties" 
               className="px-3 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-[#005B96] transition-colors relative group"
             >
               Nossos Exames
@@ -48,7 +48,7 @@ export default function ModernHeader() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#005B96] transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a 
-              href="#doctors" 
+              href="#mioma-portal" 
               className="px-3 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-[#005B96] transition-colors relative group"
             >
               Portal do Mioma

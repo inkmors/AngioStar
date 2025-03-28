@@ -3,6 +3,7 @@ export default function Hero() {
     <section className="relative text-white overflow-hidden h-screen max-h-[900px] lg:max-h-[800px]">
       <div className="absolute inset-0 z-0">
         <img 
+          loading="lazy"
           src="assets/young-handsome-physician-medical-robe-with-stethoscope.jpg" 
           alt="Médico cardiologista"
           className="w-full h-full object-cover object-center opacity-50 mix-blend-multiply lg:opacity-100"

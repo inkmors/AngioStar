@@ -25,10 +25,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-[#B3DFF0] hover:text-white">Sobre Nós</a></li>
-              <li><a href="#" className="text-[#B3DFF0] hover:text-white">Especialidades</a></li>
-              <li><a href="#" className="text-[#B3DFF0] hover:text-white">Corpo Clínico</a></li>
-              <li><a href="#" className="text-[#B3DFF0] hover:text-white">Agendamento</a></li>
+              <li><a href="#about" className="text-[#B3DFF0] hover:text-white">Sobre Nós</a></li>
+              <li><a href="#specialties" className="text-[#B3DFF0] hover:text-white">Especialidades</a></li>
+              <li><a href="#doctors" className="text-[#B3DFF0] hover:text-white">Corpo Clínico</a></li>
+              <li><a href="#step" className="text-[#B3DFF0] hover:text-white">Agendamento</a></li>
             </ul>
           </div>
 

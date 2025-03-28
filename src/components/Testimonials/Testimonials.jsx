@@ -41,7 +41,6 @@ export default function HorizontalTestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play functionality
   useEffect(() => {
     let interval;
     if (isAutoPlaying) {
@@ -72,12 +71,11 @@ export default function HorizontalTestimonialCarousel() {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-10 max-w-6xl">
         
 
         <div className="text-center mb-16">
         <div className="inline-flex items-center justify-center bg-[#B3DFF0] rounded-full px-6 py-2 mb-[3rem]">
-            {/* <span className="text-2xl mr-2">⚕️</span> */}
             <h2 className="text-[19px] font-bold text-[#003366] sm:text-[25px]">Depoimentos de Pacientes</h2>
           </div>
           {/* <div className="w-24 h-1 bg-[#005B96] mx-auto mb-6"></div> */}
@@ -91,7 +89,7 @@ export default function HorizontalTestimonialCarousel() {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Carrossel Container */}
+ 
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -106,6 +104,7 @@ export default function HorizontalTestimonialCarousel() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="flex-shrink-0 relative">
                         <img 
+                          loading="lazy"
                           src={testimonial.avatar} 
                           alt={testimonial.name}
                           className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#005B96] shadow-sm"
@@ -138,7 +137,7 @@ export default function HorizontalTestimonialCarousel() {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
+
           <button 
             onClick={goToPrev}
             className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 transition-all z-10 group"
@@ -155,7 +154,6 @@ export default function HorizontalTestimonialCarousel() {
           </button>
         </div>
 
-        {/* Indicators */}
         <div className="flex justify-center mt-10 md:mt-12 space-x-2">
           {testimonials.map((_, index) => (
             <button

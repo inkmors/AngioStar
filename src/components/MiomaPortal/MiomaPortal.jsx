@@ -2,7 +2,7 @@ import { FaClinicMedical, FaHeartbeat, FaRegCalendarAlt, FaUserMd } from "react-
 
 export default function MiomaPortal() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
+    <section id="mioma-portal" className="py-16 md:py-24 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute -left-20 -top-20 w-64 h-64 bg-pink-100 rounded-full opacity-20 mix-blend-multiply filter blur-3xl"></div>
       <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-purple-100 rounded-full opacity-20 mix-blend-multiply filter blur-3xl"></div>
