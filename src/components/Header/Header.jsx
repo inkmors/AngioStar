@@ -4,7 +4,6 @@ export default function ModernHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Efeito de scroll para header
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -21,7 +20,6 @@ export default function ModernHeader() {
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-white/90 backdrop-blur-sm shadow-md'}`}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo */}
           <div className="flex items-center">
             <img 
               src="/assets/AngioStar-Logo.png" 
@@ -31,7 +29,6 @@ export default function ModernHeader() {
             <h1 className="text-xl md:text-2xl font-bold text-[#003366]">AngioStar</h1>
           </div>
 
-          {/* Menu Desktop */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
             <a 
               href="#specialties" 
@@ -62,7 +59,6 @@ export default function ModernHeader() {
             </a>
           </nav>
 
-          {/* Botão Mobile */}
           <div className="md:hidden flex items-center">
             <button 
               onClick={toggleMenu}
@@ -87,7 +83,6 @@ export default function ModernHeader() {
         </div>
       </div>
 
-      {/* Menu Mobile */}
       <div 
         className={`md:hidden bg-white shadow-xl transition-all duration-500 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
       >
@@ -107,7 +102,7 @@ export default function ModernHeader() {
             Médicos AngioStar
           </a>
           <a 
-            href="#doctors" 
+            href="/team" 
             onClick={toggleMenu}
             className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-[#005B96] hover:bg-blue-50 transition-colors"
           >
