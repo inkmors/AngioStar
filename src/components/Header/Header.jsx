@@ -14,6 +14,22 @@ export default function ModernHeader() {
     setIsMenuOpen(false); 
   };
 
+  // Componente reutilizável para os itens do menu
+  const NavItem = ({ href, children, target, onClick }) => (
+    <a 
+      href={href} 
+      target={target}
+      onClick={onClick}
+      className="flex flex-col px-3 py-2 text-sm lg:text-base font-medium transition-all duration-300 relative group"
+      style={{ color: '#003366' }}
+    >
+      {children}
+      <span 
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-1.5rem)]"
+      ></span>
+    </a>
+  );
+
   return (
     <>
       <header 
@@ -37,49 +53,15 @@ export default function ModernHeader() {
 
             <nav className="hidden md:flex items-center">
               <div className="flex space-x-1 lg:space-x-6">
-                <a 
-                  href="/exames" 
-                  className="flex flex-col px-3 py-2 text-sm lg:text-base font-medium transition-colors relative group"
-                  style={{ color: '#003366' }}
-                >
+                <NavItem href="/exames">
                   Nossos Exames
-                  <span 
-                    className="flex h-0.5 transition-all duration-300 group-hover:w-full"
-                    style={{ 
-                      width: '0',
-                      backgroundColor: '#005B96'
-                    }}
-                  ></span>
-                </a>
-                <a 
-                  href="/team" 
-                  className="flex flex-col px-3 py-2 text-sm lg:text-base font-medium transition-colors relative group"
-                  style={{ color: '#003366' }}
-                >
+                </NavItem>
+                <NavItem href="/team">
                   Nossos Médicos
-                  <span 
-                    className="flex h-0.5 transition-all duration-300 group-hover:w-full"
-                    style={{ 
-                      width: '0',
-                      backgroundColor: '#005B96'
-                    }}
-                  ></span>
-                </a>
-                <a 
-                  href="https://portaldomioma.com.br/"
-                  target="_blank" 
-                  className="flex flex-col px-3 py-2 text-sm lg:text-base font-medium transition-colors relative group"
-                  style={{ color: '#003366' }}
-                >
+                </NavItem>
+                <NavItem href="https://portaldomioma.com.br/" target="_blank">
                   Portal do Mioma
-                  <span 
-                    className="flex h-0.5 transition-all duration-300 group-hover:w-full"
-                    style={{ 
-                      width: '0',
-                      backgroundColor: '#005B96'
-                    }}
-                  ></span>
-                </a>
+                </NavItem>
                 <button
                   onClick={openFunnel}
                   className="cursor-pointer flex items-center justify-center ml-4 px-4 py-2.5 text-sm lg:text-base font-bold text-white rounded-lg shadow-md transition-all transform hover:scale-[1.03]"
@@ -132,35 +114,38 @@ export default function ModernHeader() {
               <a 
                 href="#about" 
                 onClick={toggleMenu}
-                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50"
+                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
                   color: '#4a5568',
                   transition: 'background-color 0.2s ease'
                 }}
               >
                 Nossos Exames
+                <span className="absolute bottom-2 left-4 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-2rem)]"></span>
               </a>
               <a 
                 href="#specialties" 
                 onClick={toggleMenu}
-                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50"
+                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
                   color: '#4a5568',
                   transition: 'background-color 0.2s ease'
                 }}
               >
                 Médicos AngioStar
+                <span className="absolute bottom-2 left-4 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-2rem)]"></span>
               </a>
               <a 
                 href="/team" 
                 onClick={toggleMenu}
-                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50"
+                className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
                   color: '#4a5568',
                   transition: 'background-color 0.2s ease'
                 }}
               >
                 Portal do Mioma
+                <span className="absolute bottom-2 left-4 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-2rem)]"></span>
               </a>
               <button
                 onClick={openFunnel}
