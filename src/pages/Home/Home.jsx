@@ -2,13 +2,13 @@
 // import Stepper, { Step } from "../../components/Stepper/Reactbits";
 
 import AppointmentFunnel from "../../components/AppointmentFunnel/AppointmentFunnel";
-import Founder from "../../components/Founder/Founder";
-import Hero from "../../components/Hero/Hero";
-import MiomaPortal from "../../components/MiomaPortal/MiomaPortal";
-import Partners from "../../components/Partners/Partners";
-import Specialties from "../../components/Specialties/Specialties";
-import Testimonials from "../../components/Testimonials/Testimonials";
-import AboutUs from "../../components/AboutUs/AboutUs";
+import Founder from "../../components/HomeComponents/Founder/Founder";
+import Hero from "../../components/HomeComponents/Hero/Hero";
+import MiomaPortal from "../../components/HomeComponents/MiomaPortal/MiomaPortal";
+import Partners from "../../components/HomeComponents/Partners/Partners";
+import Specialties from "../../components/HomeComponents/Specialties/Specialties";
+import Testimonials from "../../components/HomeComponents/Testimonials/Testimonials";
+import AboutUs from "../../components/HomeComponents/AboutUs/AboutUs";
 
 // export default function Home() {
 //   const [name, setName] = useState("");

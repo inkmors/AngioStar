@@ -101,19 +101,19 @@ export default function Specialties() {
           variants={containerVariants}
           className="text-center mb-16"
         >
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center justify-center bg-[#B3DFF0] rounded-full px-6 py-2 mb-[3rem]"
-          >
-            <h2 className="text-[20px] font-bold text-[#003366] sm:text-[25px]">Nossas Especialidades</h2>
-          </motion.div>
-          
           <motion.h2 
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold text-[#003366] mb-6"
+          >
+            Nossas Especialidades  
+          </motion.h2>
+          
+          {/* <motion.h2 
             variants={itemVariants}
             className="text-3xl md:text-4xl font-bold text-[#003366] mb-4 max-w-3xl mx-auto leading-tight"
           >
             Cuidados <span className="text-[#FB2C36]">cardiovasculares</span> completos em um só lugar!
-          </motion.h2>
+          </motion.h2> */}
           
           <motion.p 
             variants={fadeInVariants}

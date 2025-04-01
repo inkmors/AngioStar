@@ -1,10 +1,13 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Founder() {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isInView) {
@@ -85,12 +88,12 @@ export default function Founder() {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold text-[#003366] mb-4"
+            className="text-4xl md:text-5xl font-bold text-[#003366] mb-6"
           >
             Conheça Nosso Fundador
           </motion.h2>
           
-          <motion.div 
+          {/* <motion.div 
             variants={{
               hidden: { scaleX: 0 },
               visible: { 
@@ -99,7 +102,7 @@ export default function Founder() {
               }
             }}
             className="w-24 h-1 bg-[#005B96] mx-auto mb-6 origin-left"
-          />
+          /> */}
           
           <motion.p 
             variants={fadeInVariants}
@@ -131,7 +134,7 @@ export default function Founder() {
                   }
                 }}
                 loading="lazy"
-                src="/assets/pexels-pavel-danilyuk-7108174.jpg" 
+                src="/assets/PhotoDrCarlosEduardo.jpeg" 
                 alt="Dr. Carlos Eduardo Diniz Couto"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -250,6 +253,7 @@ export default function Founder() {
                 </motion.a>
                 
                 <motion.button
+                  onClick={() => navigate('/team')}
                   whileHover={{ y: -2, backgroundColor: "#005B96", color: "#fff" }}
                   whileTap={{ scale: 0.98 }}
                   className="cursor-pointer border border-[#005B96] text-[#005B96] hover:bg-[#005B96] hover:text-white px-5 py-2.5 rounded-md flex items-center text-sm font-medium transition-all"

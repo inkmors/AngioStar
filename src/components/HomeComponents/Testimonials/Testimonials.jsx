@@ -75,12 +75,10 @@ export default function HorizontalTestimonialCarousel() {
         
 
         <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center bg-[#B3DFF0] rounded-full px-6 py-2 mb-[3rem]">
-            <h2 className="text-[19px] font-bold text-[#003366] sm:text-[25px]">Depoimentos de Pacientes</h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#003366] sm:text-[25px] mb-[3rem]">Depoimentos de Pacientes</h2>
           {/* <div className="w-24 h-1 bg-[#005B96] mx-auto mb-6"></div> */}
-          <p className="text-lg text-[#003366] font-[500] max-w-3xl mx-auto">
-          A confiança dos nossos pacientes é o nosso maior reconhecimento. Confira os relatos de quem já passou pelo atendimento <span className='text-red-500'>AngioStar.</span>
+          <p className="text-lg text-gray-600 font-[400] max-w-3xl mx-auto">
+          A <span className='font-[500]'>confiança</span> dos nossos <span className='font-[500]'>pacientes</span> é o nosso maior <span className='font-[500]'>reconhecimento.</span> Confira os relatos de quem já passou pelo atendimento <span className='font-[500]'>AngioStar.</span>
           </p>
         </div>
 

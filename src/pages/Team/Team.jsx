@@ -14,9 +14,9 @@ export default function Team() {
 
   return (
     <div className="font-sans bg-gray-50 overflow-hidden">
-      <TeamHero />
+      {/* <TeamHero /> */}
       <DoctorsGrid />
-      <TeamValues />
+      {/* <TeamValues /> */}
       <TeamStats />
       <TeamTestimonials />
       <TeamCTA />

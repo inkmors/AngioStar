@@ -8,5 +8,14 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  build:{
+    outDir: 'dist'
+  },
+  server:{
+    host: true,
+    historyApiFallback: true
+  },
+  preview:{
+    host: true
+  }
 })
-
