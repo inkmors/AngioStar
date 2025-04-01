@@ -58,7 +58,7 @@ export default function AboutUs() {
   return (
     <>
     <section id="about" className="relative py-16 md:py-24 bg-white overflow-hidden">
-      {/* Background elements */}
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
           initial={{ x: -100, y: -100, opacity: 0 }}
@@ -160,58 +160,59 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={controls}
-            variants={{
-              visible: { 
-                opacity: 1, 
-                scale: 1,
-                transition: { 
-                  delay: 0.2,
-                  duration: 0.8,
-                  ease: "easeOut"
-                }
-              }
-            }}
-            className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200"
-          >
-            {/* Substitua esta div por sua tag img ou componente de imagem */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-20" />
-            <img 
-              src="assets/group-doctors-colleagues-looking-lungs-x-ray.jpg" 
-              className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl"
-              alt="Equipe Médica"// [Imagem de equipe médica ou pacientes]
-            />
-            
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 opacity-30"></div>
-            
-            {/* Badge overlay */}
-            {/* <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={controls}
-              variants={{
-                visible: {
-                  y: 0,
-                  opacity: 1,
-                  transition: { delay: 0.6 }
-                }
-              }}
-              className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md"
-            >
-              <div className="flex items-center">
-                <div className="flex -space-x-2 mr-3">
-                  {[1, 2, 3].map((item) => (
-                    <div key={item} className="w-8 h-8 rounded-full bg-blue-100 border-2 border-white" />
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">+50 Especialistas</p>
-                  <p className="text-xs text-gray-500">Qualificados</p>
-                </div>
-              </div>
-            </motion.div> */}
-          </motion.div>
+          {/* Container da Imagem com animação e dimensões */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={controls}
+  variants={{
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  }}
+  className="relative w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200"
+>
+  {/* Imagem com dimensionamento responsivo para cobrir o contêiner */}
+  <img
+    src="assets/group-doctors-colleagues-looking-lungs-x-ray.jpg"
+    alt="Equipe Médica"
+    className="w-full h-full object-cover object-center"
+  />
+
+  {/* Overlay de gradiente para efeito visual */}
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 opacity-30"></div>
+
+  {/* Badge overlay (opcional) - Comentado no código original */}
+  {/* <motion.div
+    initial={{ y: 20, opacity: 0 }}
+    animate={controls}
+    variants={{
+      visible: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.6 }
+      }
+    }}
+    className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md"
+  >
+    <div className="flex items-center">
+      <div className="flex -space-x-2 mr-3">
+        {[1, 2, 3].map((item) => (
+          <div key={item} className="w-8 h-8 rounded-full bg-blue-100 border-2 border-white" />
+        ))}
+      </div>
+      <div>
+        <p className="text-sm font-semibold text-gray-900">+50 Especialistas</p>
+        <p className="text-xs text-gray-500">Qualificados</p>
+      </div>
+    </div>
+  </motion.div> */}
+</motion.div>
         </div>
 
         {/* Stats
