@@ -118,7 +118,7 @@ export default function Specialties() {
           <motion.p 
             variants={fadeInVariants}
             transition={{ delay: 0.4 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto font-[500]"
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
             Conheça nossas áreas de atuação e clique para saber mais sobre cada exame
           </motion.p>
