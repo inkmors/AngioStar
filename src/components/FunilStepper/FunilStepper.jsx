@@ -9,7 +9,6 @@ const AppointmentFunnel = ({ onClose }) => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const contentRef = useRef(null);
 
-  // Dados do formulário
   const insurancePlans = [
     'IPSEMG', 'Unimed', 'Hapivida', 'MedSênior', 'Correios',
     'Saúde Bradesco', 'Sul América', 'Geap', 'Outros', 
@@ -42,7 +41,7 @@ const AppointmentFunnel = ({ onClose }) => {
   }, [step]);
 
   const handleSubmit = () => {
-    const whatsappNumber = "5571988007359";
+    const whatsappNumber = "553199745511";
     const message = `Olá, gostaria de agendar um exame:\n\nPlano: ${selectedPlan}\nExame: ${selectedExam}\nLocal: ${selectedLocation}`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
