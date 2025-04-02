@@ -14,7 +14,6 @@ export default function ModernHeader() {
     setIsMenuOpen(false); 
   };
 
-  // Componente reutilizável para os itens do menu
   const NavItem = ({ href, children, target, onClick }) => (
     <a 
       href={href} 
@@ -53,7 +52,7 @@ export default function ModernHeader() {
 
             <nav className="hidden md:flex items-center">
               <div className="flex space-x-1 lg:space-x-6">
-                <NavItem href="/exames">
+                <NavItem href="/exams">
                   Nossos Exames
                 </NavItem>
                 <NavItem href="/team">
@@ -112,7 +111,7 @@ export default function ModernHeader() {
           >
             <div className="flex flex-col px-4 pt-2 pb-6 space-y-3">
               <a 
-                href="#about" 
+                href="/exams" 
                 onClick={toggleMenu}
                 className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
@@ -124,7 +123,7 @@ export default function ModernHeader() {
                 <span className="absolute bottom-2 left-4 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-2rem)]"></span>
               </a>
               <a 
-                href="#specialties" 
+                href="/team" 
                 onClick={toggleMenu}
                 className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
@@ -136,7 +135,7 @@ export default function ModernHeader() {
                 <span className="absolute bottom-2 left-4 h-0.5 bg-[#005B96] transition-all duration-300 w-0 group-hover:w-[calc(100%-2rem)]"></span>
               </a>
               <a 
-                href="/team" 
+                href="https://portaldomioma.com.br/" target="_blank"
                 onClick={toggleMenu}
                 className="flex px-4 py-3 rounded-lg text-base font-medium hover:bg-gray-50 relative group"
                 style={{ 
