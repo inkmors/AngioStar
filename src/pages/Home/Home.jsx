@@ -1,7 +1,3 @@
-// import React, { useState } from "react";
-// import Stepper, { Step } from "../../components/Stepper/Reactbits";
-
-import AppointmentFunnel from "../../components/AppointmentFunnel/AppointmentFunnel";
 import Founder from "../../components/HomeComponents/Founder/Founder";
 import Hero from "../../components/HomeComponents/Hero/Hero";
 import MiomaPortal from "../../components/HomeComponents/MiomaPortal/MiomaPortal";
