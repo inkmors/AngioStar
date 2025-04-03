@@ -8,7 +8,7 @@ export default function HorizontalTestimonialCarousel() {
       id: 1,
       name: "Carlos Eduardo",
       role: "Paciente de Cateterismo",
-      avatar: "/avatars/man-1.jpg",
+      avatar: "/assets/PhotoClients/Gemini_Generated_Image_mhvcg9mhvcg9mhvc.jpg",
       rating: 5,
       content: "Atendimento excepcional desde o primeiro contato. A equipe foi muito atenciosa e o Dr. Rafael explicou todo o procedimento com clareza. Me senti seguro e bem cuidado durante todo o processo."
     },
@@ -16,7 +16,7 @@ export default function HorizontalTestimonialCarousel() {
       id: 2,
       name: "Ana Paula",
       role: "Familiar de Paciente",
-      avatar: "/avatars/woman-1.jpg",
+      avatar: "/assets/PhotoClients/Gemini_Generated_Image_hlg7gghlg7gghlg7.jpg",
       rating: 4,
       content: "Minha mãe fez uma angioplastia e ficamos impressionados com a tecnologia disponível e o cuidado da equipe. O acompanhamento pós-procedimento também foi excelente."
     },
@@ -24,7 +24,7 @@ export default function HorizontalTestimonialCarousel() {
       id: 3,
       name: "Roberto Almeida",
       role: "Paciente de Check-up",
-      avatar: "/avatars/man-2.jpg",
+      avatar: "/assets/PhotoClients/Gemini_Generated_Image_y7wvcey7wvcey7wv.jpg",
       rating: 5,
       content: "Fiz um check-up cardiovascular completo e fiquei muito satisfeito. Os exames foram todos realizados no mesmo local, com equipamentos modernos e resultados rápidos."
     },
@@ -32,7 +32,7 @@ export default function HorizontalTestimonialCarousel() {
       id: 4,
       name: "Mariana Costa",
       role: "Paciente de Ecocardiograma",
-      avatar: "/avatars/woman-2.jpg",
+      avatar: "/assets/PhotoClients/Gemini_Generated_Image_qubw9bqubw9bqubw.jpg",
       rating: 5,
       content: "Profissionais extremamente competentes e humanizados. O Dr. Felipe explicou cada detalhe do meu exame com paciência e me deixou tranquila sobre os resultados."
     }
