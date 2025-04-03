@@ -183,7 +183,6 @@ export default function Specialties() {
             </div>
           </motion.div>
 
-          {/* Card Cardio */}
           <motion.div 
             custom={1}
             variants={cardVariants}

@@ -15,7 +15,7 @@ function RoutesPages() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/team" element={<Team />} />
-                {/* <Route path="/exames" element={<Exames />} /> */}
+                {/* <Route path="/exams" element={<Exames />} /> */}
                 
                 <Route path="*" element={<Error />} />
             </Routes>

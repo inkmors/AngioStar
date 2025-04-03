@@ -2,7 +2,6 @@ export default function Error() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#003366] to-[#005B96] flex flex-col justify-center items-center px-4 py-12 text-white">
             <div className="max-w-4xl mx-auto text-center">
-                {/* Ilustração */}
                 <div className="mb-8 mx-auto w-64 h-64 relative">
                     <div className="absolute inset-0 bg-[#B3DFF0] opacity-20 rounded-full blur-xl"></div>
                     <svg 
@@ -44,7 +43,6 @@ export default function Error() {
                     </svg>
                 </div>
 
-                {/* Texto */}
                 <h1 className="text-6xl md:text-8xl font-bold mb-4 text-white">404</h1>
                 <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#B3DFF0]">
                     Oops! Página não encontrada
@@ -53,7 +51,6 @@ export default function Error() {
                     Parece que você se perdeu no espaço digital. A página que você está procurando pode ter sido movida ou não existe mais.
                 </p>
 
-                {/* Botão de ação */}
                 <div className="flex justify-center">
                     <a 
                         href="/" 
@@ -63,7 +60,6 @@ export default function Error() {
                     </a>
                 </div>
 
-                {/* Rodapé adicional */}
                 <div className="mt-12 text-sm text-[#B3DFF0]">
                     <p>Se você acredita que isso é um erro, por favor entre em contato conosco.</p>
                 </div>

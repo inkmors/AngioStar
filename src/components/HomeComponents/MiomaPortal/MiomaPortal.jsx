@@ -3,13 +3,11 @@ import { FaClinicMedical, FaHeartbeat, FaRegCalendarAlt, FaUserMd } from "react-
 export default function MiomaPortal() {
   return (
     <section id="mioma-portal" className="py-16 md:py-24 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
-      {/* Elementos decorativos */}
       <div className="absolute -left-20 -top-20 w-64 h-64 bg-pink-100 rounded-full opacity-20 mix-blend-multiply filter blur-3xl"></div>
       <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-purple-100 rounded-full opacity-20 mix-blend-multiply filter blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Conteúdo textual */}
           <div className="lg:w-1/2">
             <div className="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-sm border border-pink-100">
               <FaClinicMedical className="text-pink-600 mr-2" />
@@ -56,7 +54,6 @@ export default function MiomaPortal() {
             </div>
           </div>
           
-          {/* Área do vídeo */}
           <div className="lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
               <div className="aspect-w-16 aspect-h-9 bg-gradient-to-r from-pink-100 to-purple-100 flex items-center justify-center">
@@ -77,7 +74,6 @@ export default function MiomaPortal() {
               <div className="absolute inset-0 border-8 border-white/20 rounded-2xl pointer-events-none"></div>
             </div>
             
-            {/* Estatísticas */}
             <div className="grid grid-cols-3 gap-4 mt-8 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-md text-center flex flex-col items-center border-t-4 border-pink-500">
                 <div className="text-2xl font-bold text-pink-600">+500</div>
@@ -100,13 +96,6 @@ export default function MiomaPortal() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </button>
-              {/* <button className="border border-pink-600 text-pink-600 hover:bg-pink-50 font-medium py-4 px-6 rounded-lg transition duration-300 flex items-center justify-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Ver Vídeo Explicativo
-              </button> */}
             </div>
           </div>
         </div>

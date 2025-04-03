@@ -72,8 +72,6 @@ export default function HorizontalTestimonialCarousel() {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-6 md:px-10 max-w-6xl">
-        
-
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#003366] sm:text-[25px] mb-[3rem]">Depoimentos de Pacientes</h2>
           {/* <div className="w-24 h-1 bg-[#005B96] mx-auto mb-6"></div> */}

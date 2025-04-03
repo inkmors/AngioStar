@@ -1,10 +1,10 @@
 export default function Partners() {
   const hospitals = [
-    { name: "Hospital Santa Rita", logo: "/assets/SantaRitaLogo-Photoroom.png" },
-    { name: "Hospital Evangélico", logo: "/icons/hospital.svg" },
-    { name: "Hospital Semper", logo: "/icons/stethoscope.svg" },
-    { name: "Hospital Lifecenter", logo: "/icons/heartbeat.svg" },
-    { name: "Hospital Materdei", logo: "/icons/medical-cross.svg" },
+    { name: "Hospital Santa Rita", logo: "/assets/logoHPs/SantaRitaLogo-Photoroom.png" },
+    { name: "Hospital Evangélico", logo: "/assets/logoHPs/cropped-LogoHE_newbrand.webp" },
+    { name: "Hospital Semper", logo: "/assets/logoHPs/SemperLogo-Photoroom.png"},
+    { name: "Hospital Lifecenter", logo: "/assets/logoHPs/lifecenterLogo-Photoroom.png" },
+    { name: "Hospital Materdei", logo: "/assets/logoHPs/MaterDeiLogo-Photoroom.png" },
   ]
 
   const insurances = [
@@ -29,7 +29,6 @@ export default function Partners() {
           </p>
         </div>
 
-        {/* Hospitais - Versão Flexbox */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-center mb-8 text-[#003366]">
             Hospitais Parceiros
@@ -41,18 +40,15 @@ export default function Partners() {
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center justify-center border border-gray-100 hover:border-blue-100"
                 style={{ minWidth: "160px", maxWidth: "200px", flex: "1 1 auto" }}
               >
-                <div className="bg-blue-50 p-3 rounded-full mb-3">
-                  <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path />
-                  </svg>
-                </div>
+                
+                <img src={hospital.logo} alt={hospital.name} className="w-full h-full object-contain mb-4" />
+           
                 <span className="text-gray-700 font-medium text-center">{hospital.name}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Convênios - Versão Flexbox */}
         <div className="mb-8">
           <h3 className="text-2xl font-semibold text-center mb-8 text-[#003366]">
             Convênios Aceitos

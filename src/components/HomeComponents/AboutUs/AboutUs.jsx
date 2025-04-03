@@ -75,7 +75,6 @@ export default function AboutUs() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <motion.div 
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -104,9 +103,7 @@ export default function AboutUs() {
           /> */}
         </motion.div>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" ref={ref}>
-          {/* Text Content */}
           <motion.div
             initial="hidden"
             animate={controls}
@@ -159,8 +156,6 @@ export default function AboutUs() {
             </motion.div>
           </motion.div>
 
-          {/* Image */}
-          {/* Container da Imagem com animação e dimensões */}
 <motion.div
   initial={{ opacity: 0, scale: 0.95 }}
   animate={controls}
@@ -177,17 +172,14 @@ export default function AboutUs() {
   }}
   className="relative w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200"
 >
-  {/* Imagem com dimensionamento responsivo para cobrir o contêiner */}
   <img
     src="assets/group-doctors-colleagues-looking-lungs-x-ray.jpg"
     alt="Equipe Médica"
     className="w-full h-full object-cover object-center"
   />
 
-  {/* Overlay de gradiente para efeito visual */}
   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 opacity-30"></div>
 
-  {/* Badge overlay (opcional) - Comentado no código original */}
   {/* <motion.div
     initial={{ y: 20, opacity: 0 }}
     animate={controls}

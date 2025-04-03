@@ -8,7 +8,7 @@ export default function ExamesCTA() {
           <p className="text-xl text-gray-600 mb-8">
             Nossa equipe está pronta para atendê-lo com excelência
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-colors shadow-md">
+          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
             Agendar Consulta
           </button>
         </div>
