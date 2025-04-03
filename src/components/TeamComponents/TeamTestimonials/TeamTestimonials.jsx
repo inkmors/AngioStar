@@ -24,12 +24,12 @@ const testimonials = [
       quote: "Nosso diferencial é o cuidado humanizado em cada detalhe do atendimento.",
       photo: "/doctors/dr-rafael.jpg"
     }
-  ];
+];
 
 const TeamTestimonials = () => {
   return (
-    <section className="relative py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="relative py-12 md:py-20 bg-[#FFFFFF]">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const TeamTestimonials = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 sm:p-6 border border-gray-100"
+              className="bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 sm:p-6 border border-[#F3F4F6]"
             >
               <div className="flex items-start mb-4">
                 <img 
@@ -71,7 +71,7 @@ const TeamTestimonials = () => {
               
               <div className="relative pl-8">
                 <FaQuoteLeft className="absolute left-0 top-0 text-[#B3DFF0] text-2xl" />
-                <p className="text-xs sm:text-sm text-gray-600 italic">"{testimonial.quote}"</p>
+                <p className="text-xs sm:text-sm text-[#4B5563] italic">"{testimonial.quote}"</p>
               </div>
             </motion.div>
           ))}

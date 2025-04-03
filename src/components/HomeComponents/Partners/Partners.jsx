@@ -8,23 +8,23 @@ export default function Partners() {
   ]
 
   const insurances = [
-    { name: "Unimed", logo: "/icons/shield.svg" },
-    { name: "IPSEMG", logo: "/icons/umbrella.svg" },
-    { name: "MedSênior", logo: "/icons/plus-circle.svg" },
-    { name: "Geap", logo: "/icons/user-md.svg" },
-    { name: "Saúde Bradesco", logo: "/icons/truck.svg" },
-    { name: "Hapivida - NDI", logo: "/icons/bank.svg" },
-    { name: "Amil", logo: "/icons/building.svg" },
-    { name: "Sul América", logo: "/icons/globe.svg" },
-    { name: "Cemig", logo: "/icons/building.svg" },
+    { name: "logo da Unimed", logo: "assets/logoPlans/UnimedLogo-Photoroom.png" },
+    { name: "logo da IPSEMG", logo: "assets/logoPlans/ipsemgLogo-Photoroom.png" },
+    { name: "logo da MedSênior", logo: "assets/logoPlans/MedSeniorLogo-Photoroom.png" },
+    { name: "logo da Geap", logo: "assets/logoPlans/geap-logo-Photoroom.png" },
+    { name: "logo da Saúde Bradesco", logo: "assets/logoPlans/bradescoLogo-Photoroom.png" },
+    { name: "logo da Hapvida - NDI", logo: "assets/logoPlans/hapvidaLogo-Photoroom.png" },
+    { name: "logo da Amil", logo: "assets/logoPlans/AmilLogo-Photoroom.png" },
+    { name: "logo da Sul América", logo: "assets/logoPlans/sulamericaLogo-Photoroom.png" },
+    { name: "logo da Cemig", logo: "assets/logoPlans/cemigLogo-Photoroom.png" },
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-20 bg-gradient-to-b from-[#EFF6FF] to-[#FFFFFF]">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">Parceiros e Convênios</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#4B5563] max-w-2xl mx-auto">
             Contamos com o apoio e a parceria de hospitais e clínicas reconhecidos pela excelência em exames e tratamentos cardiovasculares.
           </p>
         </div>
@@ -37,13 +37,11 @@ export default function Partners() {
             {hospitals.map((hospital, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center justify-center border border-gray-100 hover:border-blue-100"
+                className="bg-[#FFFFFF] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center justify-center border border-[#F3F4F6] hover:border-[#DBEAFE]"
                 style={{ minWidth: "160px", maxWidth: "200px", flex: "1 1 auto" }}
               >
-                
                 <img src={hospital.logo} alt={hospital.name} className="w-full h-full object-contain mb-4" />
-           
-                <span className="text-gray-700 font-medium text-center">{hospital.name}</span>
+                <span className="text-[#374151] font-medium text-center">{hospital.name}</span>
               </div>
             ))}
           </div>
@@ -57,15 +55,10 @@ export default function Partners() {
             {insurances.map((insurance, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center border border-gray-100 hover:border-blue-100"
+                className="bg-[#FFFFFF] p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center flex-col gap-2 justify-center border border-[#F3F4F6] hover:border-[#DBEAFE]"
                 style={{ minWidth: "140px", maxWidth: "180px", flex: "1 1 auto" }}
               >
-                <div className="bg-blue-50 p-2 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d={insurance.logo} />
-                  </svg>
-                </div>
-                <span className="text-gray-700 text-sm font-medium">{insurance.name}</span>
+                <img src={insurance.logo} alt={insurance.name}/>
               </div>
             ))}
           </div>

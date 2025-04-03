@@ -70,13 +70,12 @@ export default function HorizontalTestimonialCarousel() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-6 md:px-10 max-w-6xl">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-[#EFF6FF] to-[#FFFFFF]">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#003366] sm:text-[25px] mb-[3rem]">Depoimentos de Pacientes</h2>
-          {/* <div className="w-24 h-1 bg-[#005B96] mx-auto mb-6"></div> */}
-          <p className="text-lg text-gray-600 font-[400] max-w-3xl mx-auto">
-          A <span className='font-[500]'>confiança</span> dos nossos <span className='font-[500]'>pacientes</span> é o nosso maior <span className='font-[500]'>reconhecimento.</span> Confira os relatos de quem já passou pelo atendimento <span className='font-[500]'>AngioStar.</span>
+          <p className="text-lg text-[#4B5563] font-[400] max-w-3xl mx-auto">
+            A <span className='font-[500]'>confiança</span> dos nossos <span className='font-[500]'>pacientes</span> é o nosso maior <span className='font-[500]'>reconhecimento.</span> Confira os relatos de quem já passou pelo atendimento <span className='font-[500]'>AngioStar.</span>
           </p>
         </div>
 
@@ -85,7 +84,6 @@ export default function HorizontalTestimonialCarousel() {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
- 
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -96,7 +94,7 @@ export default function HorizontalTestimonialCarousel() {
                   key={testimonial.id}
                   className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100 max-w-4xl mx-auto">
+                  <div className="bg-[#FFFFFF] rounded-2xl shadow-xl p-8 md:p-10 border border-[#F3F4F6] max-w-4xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="flex-shrink-0 relative">
                         <img 
@@ -106,7 +104,7 @@ export default function HorizontalTestimonialCarousel() {
                           className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#005B96] shadow-sm"
                         />
                         <div className="absolute -bottom-3 -right-3 bg-[#005B96] rounded-full p-2 shadow-md">
-                          <FaQuoteLeft className="text-white text-sm" />
+                          <FaQuoteLeft className="text-[#FFFFFF] text-sm" />
                         </div>
                       </div>
                       <div className="text-center md:text-left">
@@ -114,15 +112,15 @@ export default function HorizontalTestimonialCarousel() {
                           {[...Array(5)].map((_, i) => (
                             <FaStar
                               key={i}
-                              className={`${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'} text-lg md:text-xl mr-1`}
+                              className={`${i < testimonial.rating ? 'text-[#F59E0B]' : 'text-[#D1D5DB]'} text-lg md:text-xl mr-1`}
                             />
                           ))}
                         </div>
-                        <p className="text-gray-600 italic text-lg md:text-xl mb-6 leading-relaxed">
+                        <p className="text-[#4B5563] italic text-lg md:text-xl mb-6 leading-relaxed">
                           "{testimonial.content}"
                         </p>
                         <div>
-                          <h4 className="font-bold text-gray-900 text-xl md:text-2xl">{testimonial.name}</h4>
+                          <h4 className="font-bold text-[#111827] text-xl md:text-2xl">{testimonial.name}</h4>
                           <p className="text-[#005B96]">{testimonial.role}</p>
                         </div>
                       </div>
@@ -133,20 +131,19 @@ export default function HorizontalTestimonialCarousel() {
             </div>
           </div>
 
-
           <button 
             onClick={goToPrev}
-            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 transition-all z-10 group"
+            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 bg-[#FFFFFF] p-3 rounded-full shadow-lg hover:bg-[#EFF6FF] transition-all z-10 group"
             aria-label="Depoimento anterior"
           >
-            <FiChevronLeft className="text-[#003366] text-xl group-hover:text-blue-800" />
+            <FiChevronLeft className="text-[#003366] text-xl group-hover:text-[#1E40AF]" />
           </button>
           <button 
             onClick={goToNext}
-            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 transition-all z-10 group"
+            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 bg-[#FFFFFF] p-3 rounded-full shadow-lg hover:bg-[#EFF6FF] transition-all z-10 group"
             aria-label="Próximo depoimento"
           >
-            <FiChevronRight className="text-[#003366] text-xl group-hover:text-blue-800" />
+            <FiChevronRight className="text-[#003366] text-xl group-hover:text-[#1E40AF]" />
           </button>
         </div>
 
@@ -155,7 +152,7 @@ export default function HorizontalTestimonialCarousel() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all cursor-pointer ${index === currentIndex ? 'bg-[#005B96] w-8' : 'bg-gray-300'}`}
+              className={`w-3 h-3 rounded-full transition-all cursor-pointer ${index === currentIndex ? 'bg-[#005B96] w-8' : 'bg-[#D1D5DB]'}`}
               aria-label={`Ir para depoimento ${index + 1}`}
             />
           ))}

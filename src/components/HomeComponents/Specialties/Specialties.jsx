@@ -78,23 +78,23 @@ export default function Specialties() {
   }
 
   return (
-    <section id="specialties" className="relative py-24 bg-gradient-to-b from-[#F0F4F8] to-white overflow-hidden">
+    <section id="specialties" className="relative py-24 bg-gradient-to-b from-[#f0f4f8] to-[#ffffff] overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={isInView ? { x: -20, opacity: 0.1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-[#FB2C36] mix-blend-multiply filter blur-3xl"
+          className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-[#fb2c36] mix-blend-multiply filter blur-3xl"
         ></motion.div>
         <motion.div 
           initial={{ x: 100, opacity: 0 }}
           animate={isInView ? { x: 20, opacity: 0.1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-[#005B96] mix-blend-multiply filter blur-3xl"
+          className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-[#005b96] mix-blend-multiply filter blur-3xl"
         ></motion.div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" ref={ref}>
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-10" ref={ref}>
         <motion.div 
           initial="hidden"
           animate={controls}
@@ -108,17 +108,10 @@ export default function Specialties() {
             Nossas Especialidades  
           </motion.h2>
           
-          {/* <motion.h2 
-            variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold text-[#003366] mb-4 max-w-3xl mx-auto leading-tight"
-          >
-            Cuidados <span className="text-[#FB2C36]">cardiovasculares</span> completos em um só lugar!
-          </motion.h2> */}
-          
           <motion.p 
             variants={fadeInVariants}
             transition={{ delay: 0.4 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-[#4b5563] max-w-2xl mx-auto"
           >
             Conheça nossas áreas de atuação e clique para saber mais sobre cada exame
           </motion.p>
@@ -133,10 +126,10 @@ export default function Specialties() {
           <motion.div 
             custom={0}
             variants={cardVariants}
-            className="group relative bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#005B96] hover:shadow-2xl transition-all duration-500"
+            className="group relative bg-[#ffffff] rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#005b96] hover:shadow-2xl transition-all duration-500"
             whileHover={{ y: -5 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#005B96]/5 to-[#003366]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#005b96]/5 to-[#003366]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative p-8 pt-10">
               <div className="flex items-center mb-6">
                 <motion.div 
@@ -148,7 +141,7 @@ export default function Specialties() {
                       transition: { delay: 0.6, type: "spring" }
                     }
                   }}
-                  className="bg-[#B3DFF0] p-3 rounded-xl mr-4"
+                  className="bg-[#b3dff0] p-3 rounded-xl mr-4"
                 >
                   <svg className="w-8 h-8 text-[#003366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -171,12 +164,12 @@ export default function Specialties() {
                     }}
                     className="flex items-start"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 bg-[#B3DFF0] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 bg-[#b3dff0] rounded-full flex items-center justify-center mr-3 mt-0.5">
                       <svg className="w-3 h-3 text-[#003366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-[#374151]">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -186,10 +179,10 @@ export default function Specialties() {
           <motion.div 
             custom={1}
             variants={cardVariants}
-            className="group relative bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#FB2C36] hover:shadow-2xl transition-all duration-500"
+            className="group relative bg-[#ffffff] rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#fb2c36] hover:shadow-2xl transition-all duration-500"
             whileHover={{ y: -5 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FB2C36]/5 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#fb2c36]/5 to-[#dc2626]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative p-8 pt-10">
               <div className="flex items-center mb-6">
                 <motion.div 
@@ -201,9 +194,9 @@ export default function Specialties() {
                       transition: { delay: 0.65, type: "spring" }
                     }
                   }}
-                  className="bg-[#FB2C36]/10 p-3 rounded-xl mr-4"
+                  className="bg-[#fb2c3633] p-3 rounded-xl mr-4"
                 >
-                  <svg className="w-8 h-8 text-[#FB2C36]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-[#fb2c36]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </motion.div>
@@ -224,12 +217,12 @@ export default function Specialties() {
                     }}
                     className="flex items-start"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 bg-[#FB2C36]/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <svg className="w-3 h-3 text-[#FB2C36]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 bg-[#fb2c3633] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <svg className="w-3 h-3 text-[#fb2c36]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-[#374151]">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -239,10 +232,10 @@ export default function Specialties() {
           <motion.div 
             custom={2}
             variants={cardVariants}
-            className="group relative bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#003366] hover:shadow-2xl transition-all duration-500"
+            className="group relative bg-[#ffffff] rounded-2xl shadow-xl overflow-hidden border-t-4 border-[#003366] hover:shadow-2xl transition-all duration-500"
             whileHover={{ y: -5 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#005B96]/5 to-[#FB2C36]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#005b96]/5 to-[#fb2c36]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative p-8 pt-10">
               <div className="flex items-center mb-6">
                 <motion.div 
@@ -254,9 +247,9 @@ export default function Specialties() {
                       transition: { delay: 0.7, type: "spring" }
                     }
                   }}
-                  className="bg-[#B3DFF0] p-3 rounded-xl mr-4"
+                  className="bg-[#b3dff0] p-3 rounded-xl mr-4"
                 >
-                  <svg className="w-8 h-8 text-[#005B96]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-[#005b96]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                 </motion.div>
@@ -277,12 +270,12 @@ export default function Specialties() {
                     }}
                     className="flex items-start"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 bg-[#B3DFF0] rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <svg className="w-3 h-3 text-[#005B96]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="flex-shrink-0 w-6 h-6 bg-[#b3dff0] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                      <svg className="w-3 h-3 text-[#005b96]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-[#374151]">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -305,15 +298,15 @@ export default function Specialties() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="relative mt-8 overflow-hidden bg-gradient-to-r from-[#005B96] to-[#003366] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-500 group"
+            className="relative mt-8 overflow-hidden bg-[#005b96] text-[#ffffff] font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-500 group"
           >
             <span className="relative z-10 flex items-center">
-              Quero Marcar Meu Exame
+              Conheça nossos exames
               <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#003366] to-[#005B96] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+            <span className="absolute inset-0 bg-[#003366] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
           </motion.button>
         </motion.div>
       </div>

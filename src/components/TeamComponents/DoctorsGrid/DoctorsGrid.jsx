@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const doctors = [
@@ -40,10 +40,37 @@ const doctors = [
   }
 ];
 
+const DoctorImage = ({ src, alt, objectPosition }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => setLoaded(true);
+  }, [src]);
+
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-[#F3F4F6]">
+      {!loaded && (
+        <div className="absolute inset-0 bg-[#E5E7EB] animate-pulse"></div>
+      )}
+      <img 
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
+          loaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{ objectPosition }}
+        loading="lazy"
+      />
+    </div>
+  );
+};
+
 export default function DoctorsGrid(){
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-b from-[#F7FAFC] to-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-[#F7FAFC] to-[#FFFFFF]">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,23 +95,19 @@ export default function DoctorsGrid(){
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-white rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex flex-col md:flex-row`}
+              className={`bg-[#FFFFFF] rounded-2xl overflow-hidden shadow-xl transition-all hover:shadow-2xl ${
+                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              } flex flex-col md:flex-row`}
             >
               <div className="w-full md:w-5/12 h-80 md:h-[28rem] relative group overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                  <img 
-                    src={doctor.photo}
-                    alt={doctor.name}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                    style={{
-                      objectPosition: index >= 2 ? 'top center' : 'center center'
-                    }}
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent"></div>
+                <DoctorImage 
+                  src={doctor.photo}
+                  alt={doctor.name}
+                  objectPosition={index >= 2 ? 'top center' : 'center center'}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/66 via-[#000000]/26 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6 w-full">
-                  <span className="inline-block bg-white/90 text-[#003366] px-4 py-2 rounded-lg text-sm font-bold shadow-sm">
+                  <span className="inline-block bg-[#ECFFFFFF] text-[#003366] px-4 py-2 rounded-lg text-sm font-bold shadow-sm">
                     {doctor.experience} de experiência
                   </span>
                 </div>
@@ -101,7 +124,7 @@ export default function DoctorsGrid(){
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                       </svg>
                     </div>
-                    <p className="text-gray-600 italic text-lg">"{doctor.quote}"</p>
+                    <p className="text-[#4B5563] italic text-lg">"{doctor.quote}"</p>
                   </div>
                 </div>
 
@@ -111,7 +134,7 @@ export default function DoctorsGrid(){
                     {doctor.expertise.map((exp, i) => (
                       <span 
                         key={i} 
-                        className="bg-[#B3DFF0] text-[#003366] px-4 py-2 rounded-lg text-sm font-medium flex items-center"
+                        className="bg-[#E0F2FE] text-[#003366] px-4 py-2 rounded-lg text-sm font-medium flex items-center"
                       >
                         <svg className="w-4 h-4 mr-2 text-[#003366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

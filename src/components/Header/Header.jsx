@@ -32,10 +32,9 @@ export default function ModernHeader() {
   return (
     <>
       <header 
-        className="sticky top-0 w-full transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-md flex flex-col"
+        className="sticky top-0 w-full transition-all duration-300 bg-[#FFF]/90 backdrop-blur-sm shadow-md flex flex-col"
         style={{
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
           zIndex: 30
         }}
       >
@@ -63,7 +62,7 @@ export default function ModernHeader() {
                 </NavItem>
                 <button
                   onClick={openFunnel}
-                  className="cursor-pointer flex items-center justify-center ml-4 px-4 py-2.5 text-sm lg:text-base font-bold text-white rounded-lg shadow-md transition-all transform hover:scale-[1.03]"
+                  className="cursor-pointer flex items-center justify-center ml-4 px-4 py-2.5 text-sm lg:text-base font-bold text-[#FFF] rounded-lg shadow-md transition-all transform hover:scale-[1.03]"
                   style={{ 
                     background: 'linear-gradient(to right, #ef4444, #dc2626)',
                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
@@ -102,7 +101,7 @@ export default function ModernHeader() {
           </div>
 
           <div 
-            className={`flex flex-col md:hidden bg-white shadow-xl ${isMenuOpen ? 'flex opacity-100' : 'hidden opacity-0'}`}
+            className={`flex flex-col md:hidden bg-[#FFF] shadow-xl ${isMenuOpen ? 'flex opacity-100' : 'hidden opacity-0'}`}
             style={{
               boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
               transition: 'opacity 0.2s ease-in-out',
@@ -148,7 +147,7 @@ export default function ModernHeader() {
               </a>
               <button
                 onClick={openFunnel}
-                className="cursor-pointer flex items-center justify-center px-4 py-3 mt-2 rounded-lg text-base font-bold text-white shadow-md hover:scale-[1.03]"
+                className="cursor-pointer flex items-center justify-center px-4 py-3 mt-2 rounded-lg text-base font-bold text-[#FFF] shadow-md hover:scale-[1.03]"
                 style={{ 
                   background: 'linear-gradient(to right, #ef4444, #dc2626)',
                   transition: 'transform 0.2s ease'
